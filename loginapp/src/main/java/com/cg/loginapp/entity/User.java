@@ -9,15 +9,15 @@ import javax.persistence.Table;
 import com.cg.loginapp.idclass.UserId;
 
 @Entity
-@Table(name="users")
+@Table(name="usersTable")
 @IdClass(UserId.class)
 public class User{
 	@Id
-	@Column(name="Email_Id")
+	@Column(name="Email_Id", nullable = false, columnDefinition = "varchar(255) default 'default@email.com'")
     private String emailId;
 
     @Id
-    @Column(name="User_type")
+    @Column(name="User_type", nullable = false, columnDefinition = "varchar(255) default 'user'")
     private String userType;
     
     @Column(name="First_name")

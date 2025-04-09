@@ -32,7 +32,7 @@ public class UserServices {
 	
 	Pattern pEmail = Pattern.compile("^(.+)@(.+)$");
 	Pattern pString = Pattern.compile("[a-zA-Z]*");
-	Pattern pDob= Pattern.compile("^(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/((?:19|20)[0-9][0-9])$");
+	Pattern pDob= Pattern.compile("^((?:19|20)[0-9]{2})-(0?[1-9]|1[0-2])-(0?[1-9]|[12][0-9]|3[01])$");
 	
 	public String login(String emailId,String password,String userType) throws SignUpExceptions,NullPointerException{
 		User appuser=repo.findByCid(emailId,userType);
@@ -111,18 +111,16 @@ public class UserServices {
 	public boolean validation(UserDTO udto) throws SignUpExceptions
 	{
 		Matcher mEmail = pEmail.matcher(udto.getEmailId());
-		Matcher mFirstName = pString.matcher(udto.getFirstName()); 
-		Matcher mLastName = pString.matcher(udto.getLastName());
+		//Matcher mFirstName = pString.matcher(udto.getFirstName()); 
+		//Matcher mLastName = pString.matcher(udto.getLastName());
 		Matcher mSecurityAns = pString.matcher(udto.getSecurityAns());
 		
 		
 		if(udto.getFirstName().isBlank()) throw new SignUpExceptions("FirstName should not be blank");
 		
-		else if(!mFirstName.matches()) throw new SignUpExceptions("FirstName should not contain numbers");
 		
 		else if(udto.getLastName().isBlank()) throw new SignUpExceptions("LastName should not be blank");
 		
-		else if(!mLastName.matches()) throw new SignUpExceptions("LastName should not contain numbers");
 		
 		else if(!dobIsValid(udto.getDob())) throw new SignUpExceptions("Date is not Correct");
 		
