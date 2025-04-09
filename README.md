@@ -1,9 +1,9 @@
 project:
-  title: "Full Stack Login & User Management Application"
+  title: "**Full Stack Login & User Management Application**"
   description: >
-    This project is a complete Full Stack User Authentication and Management System developed during my internship
-    to demonstrate my end-to-end software development capabilities. It features a robust backend built using Spring Boot
-    and a dynamic frontend using React.js, making it a fully functional CRUD-based application.
+    This project is a complete **Full Stack User Authentication and Management System** developed as part of my internship.
+    It demonstrates my end-to-end skills in designing, developing, and integrating a real-world web application
+    using **Spring Boot for backend** and **React.js for frontend**.
 
 tech_stack:
   backend:
@@ -13,7 +13,7 @@ tech_stack:
     - JPA / Hibernate
     - RESTful APIs
     - Swagger UI
-    - Layered Architecture
+    - Layered Architecture (Controller, Service, Repository)
   frontend:
     - React.js (Class Components)
     - Axios
@@ -22,12 +22,12 @@ tech_stack:
     - Custom CSS
 
 features:
-  - User SignUp & Login
-  - Password Reset using Security Questions
-  - Role-Based User Types: Doctor, Patient, Librarian, Admin, LibraryStudent
-  - Form Validation: Date, Email, Phone, Password strength
-  - Admin Features: View, Update, and Delete Users
-  - Swagger Documentation for all REST endpoints
+  - **User Registration and Login Functionality**
+  - **Password Reset using Security Question**
+  - **Role-Based Access for: Doctor, Patient, Librarian, Admin, LibraryStudent**
+  - **Form Validation on both frontend and backend**
+  - **Admin Operations: View, Update, Delete Users**
+  - **Integrated Swagger for Backend API Testing**
 
 folder_structure:
   root: "FinaLProject/"
@@ -37,24 +37,26 @@ folder_structure:
 how_to_run:
   backend:
     steps:
-      - "Import loginapp into IntelliJ or Eclipse"
-      - "Ensure PostgreSQL is running locally"
-      - "Run LoginappApplication.java"
-      - "Access APIs at: http://localhost:8081"
+      - "Import **loginapp** folder in IntelliJ or Eclipse"
+      - "Ensure PostgreSQL is installed and running on port 5432"
+      - "Database name: **postgres**, username: **postgres**, password: **postgres**"
+      - "Run **LoginappApplication.java**"
+      - "Swagger UI available at: http://localhost:8081/swagger-ui.html"
   frontend:
     steps:
-      - "Navigate to LoginFrontEndApp"
-      - "Run: npm install"
-      - "Run: npm run dev"
-      - "Open in browser: http://localhost:5173"
+      - "Open terminal and navigate to **LoginFrontEndApp**"
+      - "Run: **npm install**"
+      - "Run: **npm run dev**"
+      - "Frontend accessible at: http://localhost:5173"
 
 learning_outcomes:
-  - Integration of frontend with REST APIs
-  - Validations in frontend and backend
-  - Spring Boot application structure and JPA usage
-  - Responsive UI design with React
-  - Clean and maintainable object-oriented code
+  - Understood **end-to-end application development**
+  - Gained hands-on with **Spring Boot REST API development**
+  - Implemented **form validation and error handling**
+  - Managed **role-based user workflows**
+  - Built a **modular and maintainable full-stack app**
+  - Practiced **real-time frontend-backend integration**
 
 note: >
-  This project was developed and deployed as part of my internship experience and provided hands-on learning
-  on real-world development workflows and project structure.
+  This application was designed and implemented during my internship to simulate a professional-level web application.
+  It covers practical scenarios like data validation, routing, form handling, and role-specific logic.
